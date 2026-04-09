@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Presentes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Seção do Vídeo de Abertura -->
+<!-- Cabeçalho sem vídeo e com estilo floral -->
+<header class="convite-header">
+    <h1 class="nomes-casal">Elaine & Antonio</h1>
+    <p class="subtitulo">Lista de Presentes</p>
+    
+    <div class="paleta-cores">
+        <span class="cor-circulo branco"></span>
+        <span class="cor-circulo bambu"></span>
+        <span class="cor-circulo inox"></span>
+        <span class="cor-circulo preto"></span>
+    </div>
+
+    <!-- Cronômetro em Linha -->
+    <div id="countdown">
+        <div class="time-box"><span id="days">00</span><p>Dias</p></div>
+        <div class="time-box"><span id="hours">00</span><p>Horas</p></div>
+        <div class="time-box"><span id="mins">00</span><p>Mins</p></div>
+        <div class="time-box"><span id="secs">00</span><p>Segs</p></div>
+    </div>
+</header>
+
+<main class="conteudo-principal">
+    
+    <!-- CATEGORIA: COZINHA -->
+    <h2 class="titulo-categoria">🍽️ Cozinha</h2>
+    <div class="grid">
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Aparelho de jantar')">
+            <img src="img/aparelho-jantar.jpg" alt="Aparelho de jantar">
+            <h3>Aparelho de jantar</h3>
+            <p>R$ 250,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Jogos de copos e taças')">
+            <img src="img/copos-tacas.jpg" alt="Jogos de copos e taças">
+            <h3>Jogos de copos e taças</h3>
+            <p>R$ 120,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Jogo de talheres')">
+            <img src="img/talheres.jpg" alt="Jogo de talheres">
+            <h3>Jogo de talheres</h3>
+            <p>R$ 100,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Faqueiro')">
+            <img src="img/faqueiro.jpg" alt="Faqueiro">
+            <h3>Faqueiro</h3>
+            <p>R$ 180,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Jogo de panelas')">
+            <img src="img/panelas.jpg" alt="Jogo de panelas">
+            <h3>Jogo de panelas</h3>
+            <p>R$ 450,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Formas de cozinha')">
+            <img src="img/formas.jpg" alt="Formas de cozinha">
+            <h3>Formas de cozinha</h3>
+            <p>R$ 90,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Potes herméticos')">
+            <img src="img/potes.jpg" alt="Potes herméticos">
+            <h3>Potes herméticos</h3>
+            <p>R$ 130,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Chaleira elétrica')">
+            <img src="img/chaleira.jpg" alt="Chaleira elétrica">
+            <h3>Chaleira elétrica</h3>
+            <p>R$ 150,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Batedeira')">
+            <img src="img/batedeira.jpg" alt="Batedeira">
+            <h3>Batedeira</h3>
+            <p>R$ 350,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Bowls')">
+            <img src="img/bowls.jpg" alt="Bowls">
+            <h3>Bowls</h3>
+            <p>R$ 70,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Escorredor de louça')">
+            <img src="img/escorredor.jpg" alt="Escorredor de louça">
+            <h3>Escorredor de louça</h3>
+            <p>R$ 110,00</p>
+        </div>
+    </div>
+
+    <!-- CATEGORIA: BANHEIRO -->
+    <h2 class="titulo-categoria">🛁 Banheiro</h2>
+    <div class="grid">
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Cesto de roupa (Bambu)')">
+            <img src="img/cesto-bambu.jpg" alt="Cesto de roupa">
+            <h3>Cesto de roupa (Bambu)</h3>
+            <p>R$ 160,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Tapetinhos')">
+            <img src="img/tapetinhos.jpg" alt="Tapetinhos">
+            <h3>Tapetinhos</h3>
+            <p>R$ 50,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Kit organização bancada')">
+            <img src="img/kit-bancada.jpg" alt="Kit bancada">
+            <h3>Kit organização bancada</h3>
+            <p>R$ 85,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Jogos de toalha de banho')">
+            <img src="img/toalha-banho.jpg" alt="Toalha banho">
+            <h3>Jogos de toalha de banho</h3>
+            <p>R$ 140,00</p>
+        </div>
+    </div>
+
+    <!-- CATEGORIA: QUARTO -->
+    <h2 class="titulo-categoria">🛏️ Quarto</h2>
+    <div class="grid">
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Jogo cama Queen')">
+            <img src="img/jogo-cama.jpg" alt="Jogo cama">
+            <h3>Jogo cama completo (Queen)</h3>
+            <p>R$ 280,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Edredom Queen')">
+            <img src="img/edredom.jpg" alt="Edredom">
+            <h3>Edredom (Queen)</h3>
+            <p>R$ 320,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Travesseiros')">
+            <img src="img/travesseiros.jpg" alt="Travesseiros">
+            <h3>Travesseiros</h3>
+            <p>R$ 120,00</p>
+        </div>
+        <div class="card" onclick="mostrarQR('LINK_PIX', 'Jogo Americano')">
+            <img src="img/jogo-americano.jpg" alt="Jogo Americano">
+            <h3>Jogo Americano</h3>
+            <p>R$ 60,00</p>
+        </div>
+    </div>
+
+    <!-- RODAPÉ COM SUGESTÃO DE PIX -->
+    <footer class="sugestao-pix">
+        <h3>💝 Sugestão de presente</h3>
+        <p>Caso prefira, aceitamos PIX como presente para ajudar em nossa lua de mel.</p>
+        <button class="btn-pix" onclick="mostrarQR('SUA_CHAVE_PIX_AQUI', 'Contribuição Livre')">Presentear via PIX</button>
+    </footer>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>

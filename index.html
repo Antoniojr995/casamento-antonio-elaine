@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Presentes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Login Simples -->
+<div id="tela-login" class="modal-login">
+    <div class="login-content">
+        <h2>Bem-vindo à Lista de Presentes</h2>
+        <p>Elaine & Antonio</p>
+        <input type="text" id="nome-convidado" placeholder="Digite seu nome aqui...">
+        <button onclick="salvarNome()">Continuar</button>
+    </div>
+</div>
+
+    <!-- Seção do Vídeo de Abertura -->
+<!-- Cabeçalho sem vídeo e com estilo floral -->
+<header class="convite-header">
+    <h1 class="nomes-casal">Elaine & Antonio</h1>
+    <p class="subtitulo">Lista de Presentes</p>
+
+    <div id="countdown">
+        <div class="time-box"><span id="days">00</span><p>Dias</p></div>
+        <div class="time-box"><span id="hours">00</span><p>Horas</p></div>
+        <div class="time-box"><span id="mins">00</span><p>Mins</p></div>
+        <div class="time-box"><span id="secs">00</span><p>Segs</p></div>
+    </div>
+    <p class="subtitulo">Sugestão de Cores</p> <!-- Opcional -->
+
+    <div class="paleta-cores">
+        <div class="cor-circulo branco"></div>
+        <div class="cor-circulo bambu"></div>
+        <div class="cor-circulo inox"></div>
+        <div class="cor-circulo preto"></div>
+    </div>
+</header>
+
+<main class="conteudo-principal">
+    
+    <h2 class="titulo-categoria">🍽️ Cozinha</h2>
+    <div class="grid">
+        <!-- Itens como botões elegantes sem foto -->
+        <div class="card-item" onclick="mostrarQR('aparelho_jantar')">Aparelho de jantar</div>
+        <div class="card-item" onclick="mostrarQR('copos_tacas')">Jogos de copos e taças</div>
+        <div class="card-item" onclick="mostrarQR('talheres')">Jogo de talheres</div>
+        <div class="card-item" onclick="mostrarQR('faqueiro')">Faqueiro</div>
+        <div class="card-item" onclick="mostrarQR('panelas')">Jogo de panelas</div>
+        <div class="card-item" onclick="mostrarQR('Formas')">Formas de cozinha</div>
+        <div class="card-item" onclick="mostrarQR('Potes')">Potes herméticos</div>
+        <div class="card-item" onclick="mostrarQR('Chaleira_elétrica')">Chaleira elétrica</div>
+        <div class="card-item" onclick="mostrarQR('Batedeira')">Batedeira</div>
+        <div class="card-item" onclick="mostrarQR('Bowls')">Bowls</div>
+        <div class="card-item" onclick="mostrarQR('Escorredor')">Escorredor de louça</div>
+    </div>
+
+    <h2 class="titulo-categoria">🛁 Banheiro</h2>
+    <div class="grid">
+        <div class="card-item" onclick="mostrarQR('Cesto_de_roupa')">Cesto de roupa (Bambu)</div>
+        <div class="card-item" onclick="mostrarQR('Tapetinhos')">Tapetinhos</div>
+        <div class="card-item" onclick="mostrarQR('Kit_organização_bancada')">Kit organização bancada</div>
+        <div class="card-item" onclick="mostrarQR('toalha')">Jogos de toalha de banho</div>
+    </div>
+
+    <h2 class="titulo-categoria">🛏️ Quarto</h2>
+    <div class="grid">
+        <div class="card-item" onclick="mostrarQR('cama_Queen')">Jogo cama completo (Queen)</div>
+        <div class="card-item" onclick="mostrarQR('Edredom_Queen')">Edredom (Queen)</div>
+        <div class="card-item" onclick="mostrarQR('Travesseiros')">Travesseiros</div>
+        <div class="card-item" onclick="mostrarQR('Jogo_Americano')">Jogo Americano</div>
+    </div>
+
+</main>
+
+<!-- Modal Turbinado: QR Code + Copia/Cola + WhatsApp -->
+<div id="modal" class="modal">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <h2 id="titulo-presente"></h2>
+        
+        <!-- QR Code -->
+        <img id="qrcode" src="" alt="QR Code">
+        
+        <!-- Campo Copia e Cola -->
+        <p style="margin-top: 15px; font-weight: bold; color: #2c5282;">PIX Copia e Cola:</p>
+        <div class="pix-container">
+            <input type="text" id="input-pix" readonly>
+            <button onclick="copiarPix()" class="btn-copiar">Copiar 📋</button>
+        </div>
+
+        <!-- Botão WhatsApp -->
+       <button id="btn-whatsapp" class="btn-zap" onclick="avisarWhatsApp()">
+            Confirmar no WhatsApp 📱
+        </button>
+        
+        <button class="btn-fechar" onclick="fecharModal()">Fechar</button>
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
